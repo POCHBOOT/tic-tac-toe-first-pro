@@ -91,5 +91,4 @@ dd=[];
 }
 })
    
-window.addEventListener("click",function(){
-document.querySelector("#test").innerHTML=[...dd];})
+
