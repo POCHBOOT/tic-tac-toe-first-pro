@@ -16,7 +16,7 @@ let no=[[],[],[],[],[],[],[],[]];
 let yy=[r1,r2,r3,r4,r5,r6,r7,r8,r9];
 const l=[X,O,X,O,X,O,X,O,X];
 const tup=[X,O,X,O,X,O,X,O,X];
-
+let dd=[];
 let r=document.querySelector("#whole").childNodes.length;
 
 for(let i=0;i<r;i++){
@@ -26,6 +26,7 @@ for(let i=0;i<r;i++){
             let fd=tup.slice(0,1) ;
             y[i]=fd[0];
            dd.push(fd);
+          
      document.querySelector("#whole").childNodes[i].innerHTML=fd[0];
      
      
@@ -67,11 +68,12 @@ if(m[i].length>=3){
         y=[""];
       
        m=[""];
-                
+             ;
     }
 }
 
 }
+
 if(dd.length>=9){
 window.alert("draw");
 document.querySelector("#whole").childNodes.forEach(cc=>cc.innerHTML=null);
@@ -90,4 +92,4 @@ dd=[];
 })
    
 window.addEventListener("click",function(){
-document.querySelector("#test").innerHTML= m[0];})
+document.querySelector("#test").innerHTML=[...dd];})
