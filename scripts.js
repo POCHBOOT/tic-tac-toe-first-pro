@@ -25,7 +25,7 @@ for(let i=0;i<r;i++){
         if(document.querySelector("#whole").childNodes[i].innerHTML!=X && document.querySelector("#whole").childNodes[i].innerHTML!=O){
             let fd=tup.slice(0,1) ;
             y[i]=fd[0];
-           
+           dd.push(fd);
      document.querySelector("#whole").childNodes[i].innerHTML=fd[0];
      
      
@@ -72,11 +72,20 @@ if(m[i].length>=3){
 }
 
 }
+if(dd.length>=9){
+window.alert("draw");
+document.querySelector("#whole").childNodes.forEach(cc=>cc.innerHTML=null);
+        y=[""];
+      
+       m=[""];
+}
 if(y.every(cc => cc==="")){
-    if(m.every(cf => cf===""))
+    if(m.every(cf => cf==="")){
     y=[...yy];
 
        m=[[],[],[],[],[],[],[],[]];
+dd=[];
+};
 }
 })
    
